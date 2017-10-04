@@ -13,10 +13,10 @@ import scala.concurrent.duration.FiniteDuration;
 /**
  * Created by Artem Karpov
  */
-public class TcpConsumerServer {
+public class TcpProducerServer {
 
 
-	private static final ActorSystem system = ActorSystem.create("TcpConsumerServer");
+	private static final ActorSystem system = ActorSystem.create("TcpProducerServer");
 	private static final Materializer materializer = ActorMaterializer.create(system);
 
 	private static final FiniteDuration DELAY_ONE_SECOND = FiniteDuration.apply(1, TimeUnit.SECONDS);
@@ -25,7 +25,7 @@ public class TcpConsumerServer {
 
 	public static void main(String[] args) {
 
-		//TcpConsumerServer will throw data on 127.0.0.1:8888
+		//TcpProducerServer will throw data on 127.0.0.1:8888
 		final Source<Tcp.IncomingConnection, CompletionStage<Tcp.ServerBinding>> connections =
 				Tcp.get(system).bind("127.0.0.1", 8888);
 

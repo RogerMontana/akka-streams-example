@@ -25,7 +25,7 @@ public class TcpConsumerClient {
 	};
 
 	public static void main(String[] args) {
-		//will listen and consume message from TcpConsumerServer at 127.0.0.1:8888
+		//will listen and consume message from TcpProducerServer at 127.0.0.1:8888
 		final Flow<ByteString, ByteString, CompletionStage<Tcp.OutgoingConnection>> connection =
 				Tcp.get(system).outgoingConnection("127.0.0.1", 8888);
 
