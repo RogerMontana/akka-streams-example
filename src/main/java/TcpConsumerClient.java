@@ -15,7 +15,7 @@ import akka.util.ByteString;
 public class TcpConsumerClient {
 
 
-	private static final ActorSystem system = ActorSystem.create("QuickStart");
+	private static final ActorSystem system = ActorSystem.create("TcpConsumerClient");
 	private static final Materializer materializer = ActorMaterializer.create(system);
 
 

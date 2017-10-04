@@ -16,7 +16,7 @@ import scala.concurrent.duration.FiniteDuration;
 public class TcpConsumerServer {
 
 
-	private static final ActorSystem system = ActorSystem.create("QuickStart2");
+	private static final ActorSystem system = ActorSystem.create("TcpConsumerServer");
 	private static final Materializer materializer = ActorMaterializer.create(system);
 
 	private static final FiniteDuration DELAY_ONE_SECOND = FiniteDuration.apply(1, TimeUnit.SECONDS);
